@@ -1,3 +1,3 @@
 SELECT name ,earning_rank
 FROM movies
-ORDER BY earning_rank;
+WHERE earning_rank=(SELECT MIN(earning_rank) FROM movies);
